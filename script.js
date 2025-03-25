@@ -124,7 +124,7 @@ function verificarRespuesta(boton, seleccion, respuestaCorrecta) {
 function puntaje(itsCorrect) {
     score++;
     if (itsCorrect) {
-        score + = 30;
+        score += 30;
     }
 }
 
