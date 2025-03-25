@@ -3,16 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Interactiva</title>
+    <title>Cultura Play</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Trivia de Programación</h1>
-        <p id="pregunta"></p>
-        <div id="opciones"></div>
-        <p id="mensaje"></p>
+
+    <!--Pagina de Inicio-->
+   <div class="container" id="inicio">
+        <div class="welcome">
+           <img src="/Imagenes/Screen=Login.png" alt="welcome">
+          <h1>Bienvenido a Cultura Play</h1>
+          <p>¿Estás listo para demostrar tus conocimientos?</p>
+        </div>
+        <div class="Login">
+            <img src="/Imagenes/Logo.png" alt="logo">
+            <form action="login.php" method="post">
+                <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre">
+                <input type="submit" value="Jugar">
+            </form>
+        </div>
     </div>
+
+ <!--Pagina de Intrucciones-->    
+ <div class=" container" id="instrucciones">
+        <div class ="info-titulo"><span>Algunas reglas de este Juego</span> </div>
+        <div class="infolista">
+            <div class="info">1. Tendras solo <span>15 segundos</span>por cada pregunta.</div>
+            <div class="info">2. Una ves que selecciones  una respuesta, no se podra cambiar.</div>
+            <div class="info">3. No podras seleccionar ninguna opcion una vez el tiempo se haya termindado.</div>
+            <div class="info">4. No te podras salir del juego una vez que estes jugando.</div>
+            <div class="info">5. Obtendras puntos cadas vez que tengas una respuesta correcta.</div>
+        </div>
+        <div class="botones">
+            <button class="quit">Salir</button>
+            <button class="continue">Continuar</button>
+        </div>
+ </div>   
+                
+      
+ <!--Pagina de Preguntas-->
+
+ <div class=" quiz_box" >
+    <div  class="conteinerimg">
+        <img src="Imagenes/timeimg.png" alt="timer">
+        <div class="title">Cultura Play</div>
+        <div class="timer" id="timer" >
+            <div class="timeleft_txt">Tiempo Restante</div>
+            <div class="timeleft" id="timeleft">15</div>
+      </div>
+    </div>
+   <header>
+    <div class="scorebox">
+        <div class="score_txt">Puntaje</div>
+        <div class="score_value" id="score">0</div>
+    </div>
+    </header>
+    <section>
+        <div class="question">
+            <!-- here inserted questions for javascript-->
+        </div>
+        <div class="options">
+            <!-- here inserted options for javascript-->
+             </div>
+    </section>
+    <footer>
+        <div class="total_question">
+            <!-- here inserted question number for javascript-->
+        </div>
+        <button class="next">Siguiente</button>
+        
+        </footer>
+
+ </div>
+
+
+<!--Pagina de Resultados-->
+    <div class="results_box">
+        <div class="resultsimg">
+            <img src="Imagenes/pixeltrue-chatting-using-phone 1.png" alt="results">
+            <div class="title">Resultados</div>
+            </div>
+            <div class="complete_text">Has completado el cuestionario!</div>
+            <div class="score_text">Tu puntaje es <span class="score">0</span> de <span class="total_score">300</span>
+            <div class="botones">
+                <button class="restart">Reiniciar</button>
+                <button class="quit">Salir</button>
+                
+            </div>
+        
+        </div>
+    </div>
+
+
     <script src="script.js"></script>
 </body>
 </html>
